@@ -21,11 +21,6 @@
         .breadcrumb span { color: #718096; margin: 0 0.5rem; }
         .product-main { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
         .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
-        .image-gallery { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem; margin-bottom: 2rem; }
-        .gallery-item { border-radius: 10px; overflow: hidden; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 3px solid transparent; }
-        .gallery-item:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-        .gallery-item.active { border-color: #2c5282; }
-        .gallery-item img { width: 100%; height: 120px; object-fit: cover; display: block; }
                 .product-image { border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #f8f9fa; display: flex; align-items: center; justify-content: center; min-height: 350px; }
         .product-image img { width: 100%; max-width: 500px; height: auto; max-height: 400px; object-fit: contain; display: block; }
 
@@ -71,7 +66,6 @@
             .product-hero h1 { font-size: 2rem; }
             .product-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
-            .image-gallery { grid-template-columns: repeat(3, 1fr); }
                     .spec-table { font-size: 0.7rem; }
         }
     </style>
@@ -99,24 +93,7 @@
         <strong>Brandt VSM 300 Primary Shaker Screen</strong>
     </div>
 
-    <main class="product-main">
-        <div class="image-gallery">
-            <div class="gallery-item active" onclick="changeMainImage(this, 'images/产品卡片图/shaker-screen-universal.jpg')">
-                <img src="images/产品卡片图/shaker-screen-universal.jpg" alt="Brandt VSM 300 Primary Screen - View 1">
-            </div>
-            <div class="gallery-item" onclick="changeMainImage(this, 'images/产品卡片图/shaker-screen-universal.jpg')">
-                <img src="images/产品卡片图/shaker-screen-universal.jpg" alt="Brandt VSM 300 Primary Screen - View 2">
-            </div>
-            <div class="gallery-item" onclick="changeMainImage(this, 'images/产品卡片图/shaker-screen-universal.jpg')">
-                <img src="images/产品卡片图/shaker-screen-universal.jpg" alt="Brandt VSM 300 Primary Screen - View 3">
-            </div>
-            <div class="gallery-item" onclick="changeMainImage(this, 'images/产品卡片图/shaker-screen-universal.jpg')">
-                <img src="images/产品卡片图/shaker-screen-universal.jpg" alt="Brandt VSM 300 Primary Screen - View 4">
-            </div>
-            <div class="gallery-item" onclick="changeMainImage(this, 'images/产品卡片图/shaker-screen-universal.jpg')">
-                <img src="images/产品卡片图/shaker-screen-universal.jpg" alt="Brandt VSM 300 Primary Screen - View 5">
-            </div>
-        </div>
+    <main class="product-main">        </div>
 
         <div class="product-grid">
             <div class="product-image">
@@ -276,18 +253,6 @@
     </footer>
 
     <script>
-        function changeMainImage(thumbnail, src) {
-            const mainImg = document.getElementById('mainImage');
-            mainImg.style.opacity = '0';
-            setTimeout(() => {
-                mainImg.src = src;
-                mainImg.style.opacity = '1';
-            }, 150);
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            thumbnail.classList.add('active');
-        }
     </script>
 </body>
 </html>
