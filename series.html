@@ -433,16 +433,16 @@
                 icon: '',
                 products: [
                     { id: 'gardner-denver-pz11', name: 'Gardner Denver PZ7/8/9/10/11', icon: '', desc: 'Complete PZ series mud pumps - 600HP to 1,225 HP, 4,000-7,500 psi', img: 'images/产品卡片图/mud-pump-universal.png' },
-                    { id: 'gardner-denver-tge', name: 'Gardner Denver TGE', icon: '', desc: 'Triplex mud pump - 4×5 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
+                    { id: 'gardner-denver-tge', name: 'Gardner Denver TGE', icon: '', desc: 'Triplex mud pump - 4×5 liner configuration', img: 'images/GD-teg.png' },
                     { id: 'gardner-denver-py7', name: 'Gardner Denver PY7', icon: '', desc: 'Triplex mud pump - 7×7 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
-                    { id: 'gardner-denver-pah', name: 'Gardner Denver PAH', icon: '', desc: 'Triplex mud pump - 5×8 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
+                    { id: 'gardner-denver-pah', name: 'Gardner Denver PAH', icon: '', desc: 'Triplex mud pump - 5×8 liner configuration', img: 'images/GD-2.png' },
                     { id: 'gardner-denver-fq', name: 'Gardner Denver FQ', icon: '', desc: 'Triplex mud pump - 7-3/4 x 16 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
-                    { id: 'gardner-denver-fk', name: 'Gardner Denver FK', icon: '', desc: 'Triplex mud pump - 7-1/4 x 14 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
-                    { id: 'gardner-denver-fy', name: 'Gardner Denver FY', icon: '', desc: 'Triplex mud pump - 7-1/2 x 10 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
-                    { id: 'ideco-t1600', name: 'IDECO T1600', icon: '', desc: 'Triplex mud pump - 7-1/2 x 12 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
-                    { id: 'oilwell-a1700pt', name: 'OIL WELL A1700PT', icon: '', desc: 'Triplex mud pump - 7-1/2 x 12 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
-                    { id: 'oilwell-a1700pt-l', name: 'OIL WELL A1700PT-L', icon: '', desc: 'Triplex mud pump - "L" shaped configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
-                    { id: 'emsco-fb1600', name: 'EMSCO FB1600', icon: '', desc: 'Triplex mud pump - 7-1/2 x 12 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
+                    { id: 'gardner-denver-fk', name: 'Gardner Denver FK', icon: '', desc: 'Triplex mud pump - 7-1/4 x 14 liner configuration', img: 'images/PZ-8泥浆泵.png' },
+                    { id: 'gardner-denver-fy', name: 'Gardner Denver FY', icon: '', desc: 'Triplex mud pump - 7-1/2 x 10 liner configuration', img: 'images/PZ9.png' },
+                    { id: 'ideco-t1600', name: 'IDECO T1600', icon: '', desc: 'Triplex mud pump - 7-1/2 x 12 liner configuration', img: 'images/产品卡片图/mud pump.png' },
+                    { id: 'oilwell-a1700pt', name: 'OIL WELL A1700PT', icon: '', desc: 'Triplex mud pump - 7-1/2 x 12 liner configuration', img: 'images/baoshan.png' },
+                    { id: 'oilwell-a1700pt-l', name: 'OIL WELL A1700PT-L', icon: '', desc: 'Triplex mud pump - "L" shaped configuration', img: 'images/1122.png' },
+                    { id: 'emsco-fb1600', name: 'EMSCO FB1600', icon: '', desc: 'Triplex mud pump - 7-1/2 x 12 liner configuration', img: 'images/baoshan2.png' },
                     { id: 'opi-700hdl', name: 'OPI 700HDL', icon: '', desc: 'Triplex mud pump - 7×8 liner configuration', img: 'images/产品卡片图/mud-pump-universal.png' },
                     { id: 'intermediate-rod', name: 'Intermediate Rod / Crosshead Pin', icon: '', desc: '35CrMo alloy steel with chrome plating and precision grinding', img: 'images/intermedia rod and cross head pin.png' },
                     { id: 'piston-rod', name: 'Piston Rod', icon: '', desc: 'Alloy steel heat-treated with multiple surface treatment options', img: 'images/mud-pump-pony-rod-5.png' },
@@ -455,7 +455,7 @@
             'shaker': {
                 title: ' Shaker Screen',
                 description: 'Premium replacement screens for all major shaker brands. Stainless steel wire mesh, pyramid screens, steel frame screens, composite screens, slotted liners, wire-wrapped screens, and packing materials available.',
-                color: 'linear-gradient(135deg, #17A589 0%, #145A32 100%)',
+                color: 'linear-gradient(135deg, #D4EDDA 0%, #B5D8B5 100%)',
                 banner: 'images/shaker screens banner banner.jpeg',
                 icon: '',
                 products: [
@@ -519,8 +519,8 @@
             const grid = document.getElementById('productsGrid');
             grid.innerHTML = series.products.map(product => `
                 <div class="product-card" onclick="window.location.href='product-${product.id}.html'">
-                    <div class="product-image" style="background: ${series.color}">
-                        ${product.img ? `<img src="${product.img}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain;">` : product.icon}
+                    <div class="product-image" style="background: ${series.color}${product.img === 'images/GD-teg.png' ? '; overflow: visible;' : ''}">
+                        ${product.img ? `<img src="${product.img}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain;${product.img === 'images/GD-teg.png' ? ' width: 260px; height: 260px;' : ''}">` : product.icon}
                         <div class="product-image-overlay"></div>
                     </div>
                     <div class="product-info">
