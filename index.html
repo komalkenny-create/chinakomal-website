@@ -518,10 +518,6 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="user-menu" id="userMenu">
-            <div class="cart-icon" onclick="window.location.href='cart.html'" style="margin-right: 1rem; display: inline-flex;">
-                 Cart
-                <span class="cart-count" id="cartCount">0</span>
-            </div>
         </div>
     </nav>
 
@@ -848,10 +844,6 @@
                 const userData = JSON.parse(user);
                 const userMenuDiv = userMenu.querySelector('.cart-icon');
                 userMenu.innerHTML = `
-                    <div class="cart-icon" onclick="window.location.href='cart.html'" style="margin-right: 1rem; display: inline-flex;">
-                         Cart
-                        <span class="cart-count" id="cartCount">${document.getElementById('cartCount').textContent}</span>
-                    </div>
                     <div class="user-info" onclick="window.location.href='user-center.html'" style="display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; margin-right: 1rem;">
                         <div class="user-avatar">${userData.name.charAt(0).toUpperCase()}</div>
                         <span style="color: white; font-weight: 600;">${userData.name}</span>

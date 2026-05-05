@@ -421,10 +421,6 @@
             <li><a href="index-en.html#news">News</a></li>
             <li><a href="index-en.html#contact">Contact</a></li>
         </ul>
-        <div class="cart-icon" onclick="window.location.href='cart.html'">
-             Cart
-            <span class="cart-count" id="cartCount">0</span>
-        </div>
     </nav>
 
     <!-- Page Banner -->
@@ -697,9 +693,7 @@
 
         function buyNow() {
             addToCart();
-            setTimeout(() => {
-                window.location.href = 'cart.html';
-            }, 500);
+            showToast('Added to cart successfully');
         }
 
         function showToast(message) {
