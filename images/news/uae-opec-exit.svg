@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#1a365d"/>
+  
+  <!-- Oil Rig Silhouette -->
+  <g fill="#2c5282" opacity="0.8">
+    <rect x="350" y="50" width="100" height="350"/>
+    <rect x="300" y="100" width="200" height="50"/>
+    <rect x="320" y="200" width="160" height="50"/>
+    <polygon points="400,20 370,50 430,50"/>
+  </g>
+  
+  <!-- UAE Flag -->
+  <g transform="translate(600, 80)">
+    <rect width="120" height="80" fill="#00732f"/>
+    <rect y="27" width="120" height="27" fill="#fff"/>
+    <rect y="54" width="120" height="26" fill="#000"/>
+    <rect width="40" height="80" fill="#ff0000"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="400" y="380" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">UAE Exits OPEC</text>
+  <text x="400" y="410" font-family="Arial" font-size="16" fill="#fbbf24" text-anchor="middle">Historic Decision After 59 Years</text>
+</svg>
