@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="CHINA KOMAL News - Latest company updates, industry news, product launches, and exhibition information about oilfield equipment and drilling equipment.">
+    <meta name="keywords" content="oilfield equipment news, drilling equipment updates, CHINA KOMAL news, oil industry news, product launch">
+    <link rel="canonical" href="https://www.chinakomal.com/news.html">
+    <title>News - Latest Updates & Announcements | CHINA KOMAL</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="News - CHINA KOMAL International Co., Ltd.">
+    <meta property="og:description" content="Latest company updates, industry news, product launches, and exhibition information.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.chinakomal.com/news.html">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif; line-height: 1.8; color: #333; }
+
+        /* Navigation Bar */
+        .navbar { background: #1a365d; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .logo { font-size: 1.8rem; font-weight: bold; color: #fbbf24; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: #fbbf24; }
+        .btn-login { background: #fbbf24; color: #1a365d; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .btn-login:hover { background: #f6a81c; }
+
+        /* Page Header */
+        .page-header { background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); color: white; padding: 140px 5% 80px; text-align: center; }
+        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+        /* News Grid */
+        .news-container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; }
+
+        /* News Card */
+        .news-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+        .news-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .news-header { padding: 2rem 2rem 1rem; }
+        .news-category { display: inline-block; background: linear-gradient(135deg, #fbbf24 0%, #f6a81c 100%); color: #1a365d; padding: 4px 14px; border-radius: 15px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
+        .news-category.company { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .news-category.exhibition { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+        .news-category.product { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; }
+        .news-title { font-size: 1.4rem; color: #1a365d; margin-bottom: 0.75rem; line-height: 1.4; }
+        .news-title a { color: inherit; text-decoration: none; }
+        .news-title a:hover { color: #2c5282; }
+        .news-excerpt { color: #718096; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem; }
+        .news-footer { padding: 1rem 2rem 1.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #edf2f7; }
+        .news-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: #a0aec0; }
+        .read-more { color: #E85D3F; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .read-more:hover { text-decoration: underline; }
+
+        /* Featured News */
+        .featured-news { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; }
+        .featured-badge { display: inline-block; background: linear-gradient(135deg, #fbbf24 0%, #f6a81c 100%); color: #1a365d; padding: 4px 14px; border-radius: 15px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
+        .featured-content { padding: 3rem; }
+        .featured-title { font-size: 2rem; color: #1a365d; margin-bottom: 1rem; line-height: 1.3; }
+        .featured-excerpt { color: #718096; font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; }
+        .featured-meta { display: flex; align-items: center; gap: 1.5rem; color: #a0aec0; font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .btn-featured { display: inline-block; background: #E85D3F; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .btn-featured:hover { background: #d44f2b; transform: translateY(-2px); }
+        .featured-visual { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+        .featured-visual img { width: 100%; height: 100%; object-fit: cover; }
+        .featured-visual .placeholder { font-size: 8rem; color: rgba(255,255,255,0.3); }
+
+        /* Footer */
+        .footer { background: #1a365d; color: white; padding: 50px 5% 20px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer h3 { color: #fbbf24; margin-bottom: 1rem; }
+        .footer p, .footer a { color: #cbd5e0; margin-bottom: 0.5rem; display: block; text-decoration: none; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #2c5282; color: #cbd5e0; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .page-header h1 { font-size: 2rem; }
+            .news-grid { grid-template-columns: 1fr; }
+            .featured-news { grid-template-columns: 1fr; }
+            .featured-visual { min-height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">CHINA KOMAL</div>
+        <ul class="nav-links">
+            <li><a href="index-en.html">Home</a></li>
+            <li><a href="index-en.html#products">Products</a></li>
+            <li><a href="news.html" style="color: #fbbf24;">News</a></li>
+            <li><a href="index-en.html#about">About Us</a></li>
+            <li><a href="index-en.html#contact">Contact</a></li>
+        </ul>
+        <a href="login.html" class="btn-login">Login</a>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>News & Updates</h1>
+        <p>Stay informed with the latest company news, product launches, exhibition information, and industry updates from CHINA KOMAL</p>
+    </header>
+
+    <!-- News Content -->
+    <div class="news-container">
+        <!-- Featured News -->
+        <div class="featured-news">
+            <div class="featured-content">
+                <span class="featured-badge">⭐ Featured</span>
+                <h2 class="featured-title">CHINA KOMAL Launches New Generation of High-Pressure Mud Pumps</h2>
+                <p class="featured-excerpt">Our latest KM series high-pressure mud pumps deliver unprecedented performance and reliability for demanding drilling operations. With enhanced durability and efficiency, these pumps set new industry standards.</p>
+                <div class="featured-meta">
+                    <span>📅 May 1, 2026</span>
+                    <span>📁 Product Launch</span>
+                </div>
+                <a href="#" class="btn-featured">Read More</a>
+            </div>
+            <div class="featured-visual">
+                <div class="placeholder">📰</div>
+            </div>
+        </div>
+
+        <!-- News Grid -->
+        <div class="news-grid">
+            <!-- News Item 1 -->
+            <div class="news-card">
+                <div class="news-header">
+                    <span class="news-category company">Company News</span>
+                    <h3 class="news-title"><a href="#">CHINA KOMAL Participates in OTC 2026 Offshore Technology Conference</a></h3>
+                    <p class="news-excerpt">We successfully showcased our latest drilling equipment and solids control systems at OTC 2026 in Houston, attracting numerous international clients.</p>
+                </div>
+                <div class="news-footer">
+                    <div class="news-meta">
+                        <span>📅 Apr 28, 2026</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- News Item 2 -->
+            <div class="news-card">
+                <div class="news-header">
+                    <span class="news-category product">Product Launch</span>
+                    <h3 class="news-title"><a href="#">New Shaker Screen Series Released for Enhanced Solids Control</a></h3>
+                    <p class="news-excerpt">Our new generation of shaker screens features advanced mesh technology for improved separation efficiency and longer service life.</p>
+                </div>
+                <div class="news-footer">
+                    <div class="news-meta">
+                        <span>📅 Apr 25, 2026</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- News Item 3 -->
+            <div class="news-card">
+                <div class="news-header">
+                    <span class="news-category exhibition">Exhibition</span>
+                    <h3 class="news-title"><a href="#">Join Us at CIPPE 2026 Beijing Petroleum Exhibition</a></h3>
+                    <p class="news-excerpt">Visit our booth at CIPPE 2026 in Beijing to explore our complete range of oilfield equipment and meet our technical experts.</p>
+                </div>
+                <div class="news-footer">
+                    <div class="news-meta">
+                        <span>📅 Apr 20, 2026</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- News Item 4 -->
+            <div class="news-card">
+                <div class="news-header">
+                    <span class="news-category company">Company News</span>
+                    <h3 class="news-title"><a href="#">CHINA KOMAL Achieves ISO 9001:2015 Quality Management Certification</a></h3>
+                    <p class="news-excerpt">We are proud to announce that our manufacturing facility has been certified to ISO 9001:2015 standards, demonstrating our commitment to quality.</p>
+                </div>
+                <div class="news-footer">
+                    <div class="news-meta">
+                        <span>📅 Apr 15, 2026</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- News Item 5 -->
+            <div class="news-card">
+                <div class="news-header">
+                    <span class="news-category product">Product Launch</span>
+                    <h3 class="news-title"><a href="#">Upgraded Centrifugal Pump Series with Enhanced Efficiency</a></h3>
+                    <p class="news-excerpt">Our new centrifugal pump series features improved hydraulic design and energy-efficient motors for better performance and lower operating costs.</p>
+                </div>
+                <div class="news-footer">
+                    <div class="news-meta">
+                        <span>📅 Apr 10, 2026</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- News Item 6 -->
+            <div class="news-card">
+                <div class="news-header">
+                    <span class="news-category company">Company News</span>
+                    <h3 class="news-title"><a href="#">CHINA KOMAL Expands Production Capacity with New Manufacturing Facility</a></h3>
+                    <p class="news-excerpt">Our new 10,000 square meter manufacturing facility is now operational, doubling our production capacity to meet growing global demand.</p>
+                </div>
+                <div class="news-footer">
+                    <div class="news-meta">
+                        <span>📅 Apr 5, 2026</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>CHINA KOMAL</h3>
+                <p>Professional manufacturer of oilfield equipment and drilling solutions.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index-en.html">Home</a>
+                <a href="index-en.html#products">Products</a>
+                <a href="news.html">News</a>
+                <a href="index-en.html#about">About Us</a>
+                <a href="index-en.html#contact">Contact</a>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: sales@chinakomal.com</p>
+                <p>Tel: +86-XXX-XXXX-XXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CHINA KOMAL International Co., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Login redirect
+        document.querySelector('.btn-login').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
