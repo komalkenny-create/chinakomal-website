@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mud Gas Separator (Poor-Boy Degasser) Selection and Operation: Protecting the Mud System and the Rig from Entrained Gas | CHINA KOMAL</title>
+    <meta name="description" content="How a mud gas separator (poor-boy degasser) fits the flowline, how it removes entrained gas from drilling returns, and how to size, install and maintain one for safe, stable mud processing.">
+    <meta name="keywords" content="mud gas separator, poor boy degasser, gas buster, gas cut mud, well control equipment, drilling fluid gas separation, vent line sizing, mud leg seal, NACE, CHINA KOMAL">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chinakomal.com/blog-mud-gas-separator-degasser-selection-guide.html">
+    <meta property="og:title" content="Mud Gas Separator (Poor-Boy Degasser) Selection and Operation: Protecting the Mud System and the Rig from Entrained Gas">
+    <meta property="og:description" content="How a mud gas separator (poor-boy degasser) fits the flowline, how it removes entrained gas from drilling returns, and how to size, install and maintain one for safe, stable mud processing.">
+    <meta property="og:image" content="https://chinakomal.com/images/blog-default.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chinakomal.com/blog-mud-gas-separator-degasser-selection-guide.html">
+    <meta property="twitter:title" content="Mud Gas Separator (Poor-Boy Degasser) Selection and Operation: Protecting the Mud System and the Rig from Entrained Gas">
+    <meta property="twitter:description" content="How a mud gas separator (poor-boy degasser) fits the flowline, how it removes entrained gas from drilling returns, and how to size, install and maintain one for safe, stable mud processing.">
+    <meta property="twitter:image" content="https://chinakomal.com/images/blog-default.jpg">
+
+    <link rel="canonical" href="https://chinakomal.com/blog-mud-gas-separator-degasser-selection-guide.html">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: #fbbf24; }
+
+        .article-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .article-header h1 { font-size: 2.5rem; max-width: 800px; margin: 0 auto 1rem; line-height: 1.3; }
+        .article-meta { font-size: 0.95rem; opacity: 0.85; }
+        .article-meta span { margin: 0 0.8rem; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .article-content h2 {
+            color: #1e3c72;
+            margin: 2.5rem 0 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content h3 { color: #2a5298; margin: 2rem 0 1rem; font-size: 1.5rem; }
+
+        .article-content p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 2; }
+
+        .article-content ul, .article-content ol { margin: 1.5rem 0 1.5rem 2rem; }
+        .article-content li { margin-bottom: 0.8rem; font-size: 1.1rem; }
+
+        .article-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .article-content th { background: #1e3c72; color: white; padding: 0.9rem 1rem; text-align: left; font-size: 1rem; }
+        .article-content td { border: 1px solid #ddd; padding: 0.9rem 1rem; font-size: 1rem; }
+        .article-content tr:nth-child(even) td { background: #f8f9fb; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box h4 { color: #1e3c72; margin-bottom: 0.8rem; font-size: 1.3rem; }
+
+        .cta-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .cta-box h3 { color: white; margin-bottom: 1rem; font-size: 1.8rem; }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3c72;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-section h4 { margin-bottom: 1rem; font-size: 1.2rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #ccc; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: white; }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #2a5298;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 2rem; }
+            .article-content { padding: 1.5rem; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index-en.html" class="logo">CHINA KOMAL</a>
+            <ul class="nav-links">
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="index-en.html#products">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index-en.html#about">About</a></li>
+                <li><a href="index-en.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <h1>Mud Gas Separator (Poor-Boy Degasser) Selection and Operation: Protecting the Mud System and the Rig from Entrained Gas</h1>
+        <div class="article-meta">
+            <span>📅 September 24, 2026</span>
+            <span>✍️ By CHINA KOMAL Team</span>
+            <span>⏱️ 12 min read</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="article-content">
+<h2>Mud Gas Separator (Poor-Boy Degasser) Selection and Operation: Protecting the Mud System and the Rig from Entrained Gas</h2>
+
+<p>Gas in the mud system is one of the quiet hazards of drilling. When a formation flows gas into the wellbore and that gas is circulated to surface, it arrives in the returns as free gas and gas-cut mud. If it is not removed before those returns are processed, the gas travels with the mud through the shakers, the tanks and the pumps &mdash; and a pump drawing gas instead of liquid loses suction, breaks circulation and, in the worst case, moves the gas to somewhere it can be ignited. The mud gas separator, often called a poor-boy degasser or gas buster, is the equipment that stands between entrained gas and the rest of the mud system.</p>
+
+<p>This guide explains where the gas separator fits in the flowline, how a poor-boy degasser works, what determines whether it can handle the gas a well will deliver, and how to select, install and maintain one. It continues our series on the <a href="blog-vertical-cuttings-dryer-selection-guide.html">vertical cuttings dryer</a>, the <a href="blog-mud-cleaner-solids-control-guide.html">mud cleaner</a> and the <a href="blog-decanter-centrifuge-solids-control-guide.html">decanter centrifuge</a> &mdash; and it addresses the stage that protects all of them.</p>
+
+<h2>Where the Gas Separator Fits</h2>
+
+<p>The gas separator is not a solids control device; it is a fluid-handling device placed at the head of the return line. In a typical arrangement:</p>
+<ul>
+<li><strong>Well returns</strong> come up the annulus and are routed through the choke manifold and the rig's flowline while the well is closed in or being controlled.</li>
+<li><strong>The gas separator</strong> is installed in the flowline ahead of the shale shakers, so the returns are de-gassed before they reach the shakers and the pits.</li>
+<li><strong>The drilling fluid</strong> passing through the separator is the well's mud, not just the cuttings stream &mdash; which is why the separator is a well-control item, not a mud-cleaning accessory.</li>
+</ul>
+<p>Its function is to give entrained and free gas a place to break out, separate from the liquid, and be routed safely away via the vent line instead of travelling down the flowline. Everything downstream &mdash; shakers, mud cleaner, centrifuge and pumps &mdash; works better, and far more safely, when the gas has already been taken out ahead of them.</p>
+
+<h2>How a Mud Gas Separator Works</h2>
+
+<p>A poor-boy degasser is deliberately simple, and its simplicity is why it works. Gas-cut mud enters the vessel tangentially and is directed onto a series of internal baffles and plates. The change in direction and the increased residence time in the vessel let the gas break out of the liquid and rise to the top of the vessel, while the liquid falls to the bottom. The gas leaves through a large vent line to a safe location, and the liquid leaves through a discharge. The discharge is fitted with a liquid seal &mdash; commonly called a mud leg or U-tube &mdash; that keeps a column of fluid in place so that gas cannot blow straight through the vessel and escape through the mud discharge.</p>
+
+<p>Three elements decide whether it performs:</p>
+<ul>
+<li><strong>The vessel and internals</strong> &mdash; baffle design and vessel volume set how much gas can break out and how much liquid the unit can pass.</li>
+<li><strong>The vent line</strong> &mdash; its diameter, length, routing and fitting count set the back-pressure: the harder it is for gas to leave, the less gas the unit can separate.</li>
+<li><strong>The liquid seal (mud leg)</strong> &mdash; its height and integrity set the balance between gas escaping upward through the vent and liquid exiting through the discharge.</li>
+</ul>
+
+<div class="highlight-box"><h4>Practical Note</h4><p>Most gas separators fail to perform not because the vessel is too small but because the vent line is too restrictive. A long, undersized, elbowed or partially blocked vent line raises back-pressure, forces gas to stay in the liquid and pushes the gas down the flowline to the shakers &mdash; precisely what the separator exists to prevent. Vent line sizing and routing deserve the same engineering attention as the vessel itself.</p></div>
+
+<h2>Why Size and Vent Line Matter</h2>
+
+<p>A gas separator is sized on the maximum gas rate it must handle, not on the mud rate alone. When a well takes a kick, the gas arriving at surface can rise sharply and briefly &mdash; the separator has to cope with that peak, and with the possibility that a large gas volume arrives faster than any separator can process. That is why the equipment is part of well-control planning and why operating procedures must define the point at which returns are diverted, rather than relying on the separator to manage every volume indefinitely.</p>
+
+<p>The two practical consequences are:</p>
+<ul>
+<li><strong>Vent line capacity is the limiting factor.</strong> The vent must be large enough, short enough and straight enough to carry the peak gas rate at acceptable back-pressure to a safe discharge point &mdash; typically a flare or a location upwind and away from the rig floor, living quarters and ignition sources.</li>
+<li><strong>The liquid seal must be maintained.</strong> If the mud leg runs dry, gas blows through the discharge; if it is over-filled or plugged, liquid backs up and the unit floods. Both conditions turn a separator into a problem rather than a solution.</li>
+</ul>
+
+<h2>Selection: What Actually Matters</h2>
+
+<p>Selecting a gas separator is a matter of matching capacity to the well, the mud and the environment &mdash; not picking the largest unit available.</p>
+<table>
+    <tr><th>Variable</th><th>What it drives</th><th>Practical consideration</th></tr>
+    <tr><td>Maximum gas rate to be handled</td><td>Vessel size and internals</td><td>Size on the peak the well can deliver, not the average; confirm against well-control planning</td></tr>
+    <tr><td>Mud circulation rate</td><td>Liquid-handling capacity</td><td>The vessel must pass the full return rate without flooding or carrying liquid out the vent</td></tr>
+    <tr><td>Vent line diameter and length</td><td>Back-pressure and separating efficiency</td><td>Oversize rather than undersize; minimise length, elbows and restrictions</td></tr>
+    <tr><td>Liquid seal / mud leg height</td><td>Prevention of gas blow-through</td><td>Set the seal for the expected pressure conditions and make it easy to monitor</td></tr>
+    <tr><td>Pressure rating and materials</td><td>Integrity and service life</td><td>Sour (H<sub>2</sub>S) service calls for materials and rating suited to it, not a standard unit</td></tr>
+    <tr><td>Site conditions (offshore/land, climate)</td><td>Installation, footprint, support</td><td>Offshore and cold-climate installations add constraints on placement and support</td></tr>
+</table>
+
+<h2>Installation: Placement, Venting and Discharge</h2>
+<p>Installation decisions usually determine field performance more than any specification on the data sheet.</p>
+<ul>
+<li><strong>Place it at the head of the flowline, ahead of the shakers.</strong> De-gas early so the rest of the system sees clean liquid.</li>
+<li><strong>Route the vent to a safe, unobstructed discharge.</strong> Keep it as straight and short as practical, sized generously, with a clear path to the flare or vent point and no low points where liquid can collect and freeze or block.</li>
+<li><strong>Support and anchor the vent line properly.</strong> A long unsupported vent can move, leak or sag; both introduce restrictions.</li>
+<li><strong>Provide for the liquid discharge.</strong> The mud leg must be visible and monitorable so operators can confirm the seal is intact.</li>
+<li><strong>Keep the operating area clear.</strong> The separator and its vent discharge must be away from ignition sources and from areas where personnel work.</li>
+</ul>
+
+<h2>Operating Habits That Decide the Result</h2>
+<ul>
+<li><strong>Watch the mud leg.</strong> A healthy seal is the single best indicator the unit is working; a dry or flooded leg is an immediate problem.</li>
+<li><strong>Monitor gas readings and pit levels.</strong> Rising gas in the returns means more load on the separator &mdash; act on the well, not just the equipment.</li>
+<li><strong>Follow the well-control procedure.</strong> Know the point at which returns are diverted and the separator is bypassed; do not ask the unit to handle a volume beyond its rating.</li>
+<li><strong>Keep the vents clear.</strong> Inspect for blockages, ice, debris or liquid traps, especially after cold weather or heavy mud returns.</li>
+<li><strong>Do not run the unit wet and overloaded.</strong> Flooding the vessel pushes liquid up the vent and defeats separation.</li>
+</ul>
+
+<h2>Maintenance and Inspection</h2>
+<p>A gas separator has few moving parts, but it lives in an abrasive, sometimes corrosive and occasionally high-pressure service, so inspection is what keeps it reliable. Check the vessel and internals for erosion and scaling, confirm baffles and plates are intact, inspect the vent line for blockages, corrosion and support damage, verify the liquid seal behaviour and the discharge line, and examine all connections and flanges for leaks. Contractors who keep seal components, gaskets and vent-line spares available &mdash; and who build inspection into the rig's routine &mdash; keep the unit available at exactly the moment it is needed. A separator that has been quietly bypassed for weeks is not protection; it is an unmonitored gap in the well-control system.</p>
+
+<h2>A Selection and Setup Checklist</h2>
+<table>
+    <tr><th>Question to answer</th><th>Why it matters</th></tr>
+    <tr><td>Is the separator rated for the peak gas rate the well can deliver?</td><td>Prevents it from being overwhelmed during a kick</td></tr>
+    <tr><td>Is the vent line generously sized, short and free of restrictions?</td><td>Vent back-pressure is the main limit on separation efficiency</td></tr>
+    <tr><td>Is the vent routed to a safe discharge away from ignition sources?</td><td>Protects the rig and personnel</td></tr>
+    <tr><td>Is the liquid seal easy to monitor and set?</td><td>A dry or flooded leg disables effective separation</td></tr>
+    <tr><td>Are materials and rating suited to the service, including sour gas?</td><td>Standard units may not be appropriate for H<sub>2</sub>S</td></tr>
+    <tr><td>Does the well-control procedure define when returns are diverted?</td><td>Keeps the separator within its design envelope</td></tr>
+    <tr><td>Is inspection scheduled and are seal/vent spares stocked?</td><td>Keeps the unit available when it matters most</td></tr>
+</table>
+
+<p>Entrained gas is a well-control problem before it is a mud-handling one. A mud gas separator sized to the peak gas rate, installed with a generously sized vent line and a well-maintained liquid seal, removes that gas safely and lets every stage downstream work as designed. Sized or installed poorly, it does the opposite &mdash; and the consequences run from damaged pumps and lost circulation to a far more serious safety event.</p>
+
+<div class="cta-box"><h3>Specifying a Gas Separator or Well-Control Equipment?</h3><p>CHINA KOMAL INTERNATIONAL CO., LTD supplies mud gas separators alongside shale shakers, mud cleaners, decanter centrifuges, cuttings dryers and the pumps that move your solids and fluid streams &mdash; supported by spares stocking and export logistics to operating regions worldwide. Our engineering team can help you match a separator to your peak gas rate, specify the vent line and liquid seal, and plan the parts that keep it available. Contact us for a quotation.</p><a href="index-en.html#contact" class="cta-button">Contact Us &rarr;</a></div>
+<p><em>Published: September 24, 2026</em></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CHINA KOMAL</h4>
+                <p>Professional oilfield equipment manufacturer — drilling equipment, solids control systems, mud pump parts, shaker screens, and high-pressure pumps.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="index-en.html#products">Products</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="index-en.html#products">Drilling Equipment</a></li>
+                    <li><a href="index-en.html#products">Solids Control</a></li>
+                    <li><a href="index-en.html#products">Mud Pump Parts</a></li>
+                    <li><a href="index-en.html#products">Shaker Screens</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 kenny@chinakomal.com</li>
+                    <li>📞 +86 17777878139</li>
+                    <li>🌐 chinakomal.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CHINA KOMAL INTERNATIONAL CO., LTD. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
