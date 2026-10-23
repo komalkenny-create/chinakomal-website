@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrifugal Transfer Pumps, Charge Pumps and Mixing Pumps: Sizing the Pumps That Keep a Mud System Alive | CHINA KOMAL</title>
+    <meta name="description" content="A practical guide to centrifugal transfer, charge, mixing and agitation pumps on a drilling mud system: how to size them on real duty conditions, arrange suction and lines, and keep them available.">
+    <meta name="keywords" content="centrifugal transfer pump, charge pump, mud mixing pump, agitation pump, trip tank transfer pump, mud system pumps, drilling fluid transfer, pump sizing, CHINA KOMAL">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chinakomal.com/blog-centrifugal-transfer-charge-pumps-mud-system-guide.html">
+    <meta property="og:title" content="Centrifugal Transfer Pumps, Charge Pumps and Mixing Pumps: Sizing the Pumps That Keep a Mud System Alive">
+    <meta property="og:description" content="A practical guide to centrifugal transfer, charge, mixing and agitation pumps on a drilling mud system: how to size them on real duty conditions, arrange suction and lines, and keep them available.">
+    <meta property="og:image" content="https://chinakomal.com/images/blog-default.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chinakomal.com/blog-centrifugal-transfer-charge-pumps-mud-system-guide.html">
+    <meta property="twitter:title" content="Centrifugal Transfer Pumps, Charge Pumps and Mixing Pumps: Sizing the Pumps That Keep a Mud System Alive">
+    <meta property="twitter:description" content="A practical guide to centrifugal transfer, charge, mixing and agitation pumps on a drilling mud system: how to size them on real duty conditions, arrange suction and lines, and keep them available.">
+    <meta property="twitter:image" content="https://chinakomal.com/images/blog-default.jpg">
+
+    <link rel="canonical" href="https://chinakomal.com/blog-centrifugal-transfer-charge-pumps-mud-system-guide.html">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: #fbbf24; }
+
+        .article-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .article-header h1 { font-size: 2.5rem; max-width: 800px; margin: 0 auto 1rem; line-height: 1.3; }
+        .article-meta { font-size: 0.95rem; opacity: 0.85; }
+        .article-meta span { margin: 0 0.8rem; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .article-content h2 {
+            color: #1e3c72;
+            margin: 2.5rem 0 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content h3 { color: #2a5298; margin: 2rem 0 1rem; font-size: 1.5rem; }
+
+        .article-content p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 2; }
+
+        .article-content ul, .article-content ol { margin: 1.5rem 0 1.5rem 2rem; }
+        .article-content li { margin-bottom: 0.8rem; font-size: 1.1rem; }
+
+        .article-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .article-content th { background: #1e3c72; color: white; padding: 0.9rem 1rem; text-align: left; font-size: 1rem; }
+        .article-content td { border: 1px solid #ddd; padding: 0.9rem 1rem; font-size: 1rem; }
+        .article-content tr:nth-child(even) td { background: #f8f9fb; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box h4 { color: #1e3c72; margin-bottom: 0.8rem; font-size: 1.3rem; }
+
+        .cta-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .cta-box h3 { color: white; margin-bottom: 1rem; font-size: 1.8rem; }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3c72;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-section h4 { margin-bottom: 1rem; font-size: 1.2rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #ccc; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: white; }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #2a5298;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 2rem; }
+            .article-content { padding: 1.5rem; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index-en.html" class="logo">CHINA KOMAL</a>
+            <ul class="nav-links">
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="index-en.html#products">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index-en.html#about">About</a></li>
+                <li><a href="index-en.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <h1>Centrifugal Transfer Pumps, Charge Pumps and Mixing Pumps: Sizing the Pumps That Keep a Mud System Alive</h1>
+        <div class="article-meta">
+            <span>📅 October 23, 2026</span>
+            <span>✍️ By CHINA KOMAL Team</span>
+            <span>⏱️ 12 min read</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="article-content">
+<h2>Centrifugal Transfer Pumps, Charge Pumps and Mixing Pumps: Sizing the Pumps That Keep a Mud System Alive</h2>
+
+<p>The mud pumps on the rig floor get the attention. The transfer pumps buried in the mud pit area rarely do &mdash; until a trip tank cannot be filled quickly, a suction compartment runs dry and the main pumps lose their charge, or a slug of heavy mud takes an hour to move between tanks. These smaller centrifugal pumps are the circulation that keeps the whole system functioning: moving fluid, charging the main pumps, feeding the hopper and transferring mud to and from the active system.</p>
+
+<p>This guide covers the shell of the mud system &mdash; centrifugal transfer and charge pumps, mixing and agitation pumps, and the transfer practice around them &mdash; and how to size and specify them without over-building or under-delivering. It follows our guides to the <a href="blog-mud-mixing-hopper-additive-systems-guide.html">mixing hopper and mud mixing system</a>, the <a href="blog-mud-cleaner-solids-control-guide.html">mud cleaner</a>, the <a href="blog-vertical-cuttings-dryer-selection-guide.html">vertical cuttings dryer</a>, the <a href="blog-decanter-centrifuge-solids-control-guide.html">decanter centrifuge</a> and the <a href="blog-mud-gas-separator-degasser-selection-guide.html">mud gas separator</a>.</p>
+
+<h2>What These Pumps Actually Do</h2>
+
+<p>A mud system uses three families of centrifugal pump, and confusing their jobs is the root of most specification errors.</p>
+
+<ul>
+<li><strong>Charge (supercharging) pumps</strong> take fluid from the active or suction tank and feed it to the main mud pumps under positive pressure. Their job is to keep the main pumps flooded, prevent cavitation and let the main pumps run at their rated output instead of fighting a suction lift.</li>
+<li><strong>Transfer pumps</strong> move fluid between tanks, from the trip tank, to the reserve pit, or onto a supply vessel. Their job is to do it at the required rate over the required distance, which is often much further than it looks on a line drawing.</li>
+<li><strong>Mixing and agitation pumps</strong> provide the flow and pressure for the mixing hopper nozzle and for gun agitation. Their job is measured at the nozzle, not at the pump discharge.</li>
+</ul>
+
+<p>All three are usually centrifugal, chosen for flow, simplicity and tolerance of solids. All three are also commonly undersized, because they are bought on a nominal flow rate rather than on the head they will actually produce in a real piping arrangement.</p>
+
+<h2>Why Centrifugal Pumps Disappoint on Real Mud Systems</h2>
+
+<p>A centrifugal pump's flow is not a fixed number. It falls as the head across the pump rises. The published curve usually starts at a best-efficiency point in clean water at a moderate head &mdash; conditions that almost never exist on a mud pit.</p>
+
+<p>On a real installation, several things eat into the available flow at once:</p>
+<ul>
+<li><strong>Weighted and viscous fluid.</strong> A 14 ppg mud with a developed yield point is harder to move than water, and the pump's head falls accordingly. A pump quoted on water flow will not deliver that flow on heavy mud.</li>
+<li><strong>Line length and fittings.</strong> Every metre of pipe, elbow, valve and hose adds friction head. Long transfer lines from the pit to a vessel, or from a remote tank to the hopper, can consume much of the pump's capability.</li>
+<li><strong>Static lift.</strong> Transferring fluid up to a higher tank or over a deck is a fixed head penalty before friction is even considered.</li>
+<li><strong>Suction conditions.</strong> Long suction lines, a high screen, a partially submerged suction or a vortexing tank all reduce the net positive suction head and can quietly cut performance or cavitate the pump.</li>
+</ul>
+
+<p>The practical consequence: a pump should be specified against the worst case &mdash; heaviest fluid, lowest tank level, longest line, highest lift, fullest set of elbows &mdash; not the nominal duty. A pump chosen at its best-efficiency point for average conditions will fall short exactly when the crew needs it most.</p>
+
+<div class="highlight-box"><h4>Practical Note</h4><p>Before blaming a transfer pump for poor performance, check the suction. A blocked or undersized suction screen, a partly closed valve, a vortex forming in the tank or a suction line that is too long or too narrow will all reduce flow more than wear in the pump itself. The cheapest fix on most installations is a short, large-bore suction run and a clean screen.</p></div>
+
+<h2>Sizing the Charge Pump</h2>
+
+<p>The charge pump exists to protect the main mud pumps, so it should be sized on the main pump's requirement, not on a rule of thumb. What matters:</p>
+<ul>
+<li><strong>Flow above the main pump's maximum.</strong> There must be enough surplus to cover variations in demand and to keep the suction manifold pressurised at all times.</li>
+<li><strong>Pressure at the main pump suction.</strong> A small but stable positive pressure is the goal; too little leaves the main pumps vulnerable to cavitation, too much wastes power and can stress seals and connections.</li>
+<li><strong>Suction tank arrangement.</strong> The charge pump should draw from a compartment that is agitated and that the returns actually reach, or it will deliver inconsistent fluid to the main pumps.</li>
+<li><strong>Redundancy.</strong> Most installations use two charge pumps in parallel, one running and one standby, with the ability to switch without interrupting the main pumps.</li>
+</ul>
+
+<p>An undersized charge pump is felt as limitations on the main pumps: they cannot be pushed to their rated rate, liners and pistons wear faster, and pressure fluctuates. An oversized one is less harmful but adds power draw and erosion for no benefit.</p>
+
+<h2>Transfer Pump Duty and the Line That Eats It</h2>
+
+<p>Transfer pump problems usually start with a line drawing that looks acceptable and an installation where the pump is at the wrong end of a long route. A few design habits make a large difference:</p>
+<ul>
+<li><strong>Size the line for velocity, not convenience.</strong> A pipe that is too small for the required flow adds friction head disproportionately; a pipe that is too large lets solids settle.</li>
+<li><strong>Minimise elbows and avoid long horizontal runs into a lift.</strong> Fittings add head quickly, and every extra bend on an abrasive duty is also a wear point.</li>
+<li><strong>Keep the pump close to the suction source.</strong> Short suction, long discharge is the rule &mdash; a centrifugal pump pushes far better than it pulls.</li>
+<li><strong>Provide a clear priming path.</strong> A centrifugal pump on a suction lift needs to be primed and frequently needs a foot valve that seals; a flooded suction arrangement is far more reliable.</li>
+</ul>
+
+<p>For trip tank and well control work, the transfer rate has to be credible: the pump must be able to move fluid at the rate the procedure calls for, at the head the tank arrangement imposes, with the fluid that is actually in the tank. A trip pump that is nominally sufficient but cannot keep up during the operation it exists for is a well control weakness, not an inconvenience.</p>
+
+<h2>Mixing and Agitation Pump Duty</h2>
+
+<p>Mixing pumps serve the hopper and the agitator guns, and their performance is measured at the nozzle. Two points decide whether they work:</p>
+<ul>
+<li><strong>Pressure at the hopper nozzle.</strong> The venturi needs a stable, sufficient jet. If the pump's discharge pressure at the worst-case tank level is not known, the hopper's performance is a guess.</li>
+<li><strong>Flow for gun agitation.</strong> Agitation guns are only effective when the pump can supply the number of guns in use at the pressure the nozzles need. Adding guns to a marginal pump weakens every gun on the header.</li>
+</ul>
+
+<p>Because mixing and agitation share a pump on many installations, the two duties compete exactly when mixing matters most. A system that cannot both agitate and mix simultaneously is a system that delivers off-spec fluid at one end or unmixed additive at the other.</p>
+
+<h2>Materials, Wear and Spare Parts</h2>
+
+<p>Centrifugal mud pumps handle abrasive, sometimes weighted and mildly corrosive fluid. Wear concentrates at predictable points: the impeller, the casing and wear plate, the shaft seal or gland area, and the suction and discharge connections. Specification choices that matter:</p>
+<ul>
+<li><strong>Wear-resistant impeller and casing materials</strong> matched to the solids content and to whether the pump sees weighted mud.</li>
+<li><strong>Sealing arrangement appropriate to the duty</strong> &mdash; packed gland, mechanical seal or expeller &mdash; and to how much operator attention is realistically available.</li>
+<li><strong>A design that can be serviced in place</strong>, with the wearing parts accessible without removing the whole pump from the skid.</li>
+<li><strong>Spares on site.</strong> Impellers, seals, gland packing and gaskets are inexpensive relative to the downtime they cause if missing.</li>
+</ul>
+
+<p>Performance should be monitored, not assumed. A pump that has slowly lost flow against its curve is invisible on a gauge if nobody records the baseline &mdash; and a worn impeller is often replaced long after it started costing the operation time.</p>
+
+<h2>Pump Selection Reference</h2>
+
+<table>
+    <tr><th>Duty</th><th>What determines the size</th><th>What to confirm with the supplier</th></tr>
+    <tr><td>Charge pump</td><td>Main pump maximum rate plus surplus; required suction pressure</td><td>Flow and pressure at the main pump suction, including standby arrangement</td></tr>
+    <tr><td>Transfer pump</td><td>Required transfer rate, line length and fittings, lift, fluid weight</td><td>Head at the actual duty point on heavy mud, not clean-water performance</td></tr>
+    <tr><td>Trip tank transfer</td><td>Well control procedure rates, tank arrangement and height</td><td>Rate achievable at the real head with the real fluid</td></tr>
+    <tr><td>Mixing pump</td><td>Hopper nozzle pressure and flow for recirculation</td><td>Pressure at the nozzle at the worst-case tank level</td></tr>
+    <tr><td>Agitation pump</td><td>Number of guns, nozzle sizes, header layout</td><td>Flow and pressure with all guns in service</td></tr>
+</table>
+
+<h2>Operating Practice That Extends Pump Life</h2>
+
+<ul>
+<li><strong>Keep suction screens clean.</strong> A blocked screen is the fastest route to cavitation and impeller damage.</li>
+<li><strong>Avoid running dry or throttling the suction.</strong> Centrifugal pumps control flow on the discharge side; throttling suction invites cavitation.</li>
+<li><strong>Match the fluid to the pump.</strong> Do not expect a pump with a standard impeller to move heavily weighted mud efficiently; if it must, plan for reduced rates.</li>
+<li><strong>Watch for aeration.</strong> A pump that is recirculating foamy, gas-cut fluid loses performance and can damage seals.</li>
+<li><strong>Rotate standby pumps.</strong> A standby that has sat idle for months may not start when needed. Run it on a schedule.</li>
+</ul>
+
+<h2>A Check Before You Buy</h2>
+
+<p>Transfer and charge pumps are low-cost items with an outsized effect on whether the rest of the mud system works. Answer these questions before specifying:</p>
+
+<ul>
+<li>What is the heaviest fluid the pump will handle, and at what temperature?</li>
+<li>What is the required rate at the worst-case head, including line length, fittings and lift?</li>
+<li>Is the suction flooded or on a lift, and how is the pump primed?</li>
+<li>What is the fluid's solids content and abrasiveness, and what wear parts will it consume?</li>
+<li>Are redundant pumps needed, and how are they switched?</li>
+<li>Which spares should be held on site to keep the pump available?</li>
+</ul>
+
+<p>The mud system is a chain, and the centrifugal pumps are the links that never get photographed. Sized on real duty conditions, arranged with short suctions and adequate lines, and maintained with a small stock of wear parts, they let the main pumps, the solids control equipment and the mud programme all run as intended. Sized on a catalogue flow figure, they become the reason a rig loses hours at the exact moment the operation cannot afford it.</p>
+
+<div class="cta-box"><h3>Specifying Mud Transfer and Charge Pumps?</h3><p>CHINA KOMAL INTERNATIONAL CO., LTD supplies centrifugal transfer, charge, mixing and agitation pumps alongside the full solids control and mud system package &mdash; shakers and screens, mud cleaners, decanter centrifuges, cuttings dryers, gas separators and mixing hoppers &mdash; with spare parts stocking and export logistics to operating regions worldwide. Our engineering team can help you size pumps on real duty conditions, plan tank arrangements and specify the wear parts that keep a mud system available. Contact us for a quotation.</p><a href="index-en.html#contact" class="cta-button">Contact Us &rarr;</a></div>
+<p><em>Published: October 23, 2026</em></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CHINA KOMAL</h4>
+                <p>Professional oilfield equipment manufacturer — drilling equipment, solids control systems, mud pump parts, shaker screens, and high-pressure pumps.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="index-en.html#products">Products</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="index-en.html#products">Drilling Equipment</a></li>
+                    <li><a href="index-en.html#products">Solids Control</a></li>
+                    <li><a href="index-en.html#products">Mud Pump Parts</a></li>
+                    <li><a href="index-en.html#products">Shaker Screens</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 kenny@chinakomal.com</li>
+                    <li>📞 +86 17777878139</li>
+                    <li>🌐 chinakomal.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CHINA KOMAL INTERNATIONAL CO., LTD. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
