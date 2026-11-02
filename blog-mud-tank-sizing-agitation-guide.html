@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mud Tank Sizing and Agitation: How to Avoid a Stagnant or Overbuilt Mud System | CHINA KOMAL</title>
+    <meta name="description" content="How to size drilling mud tanks and select the right agitation setup — active vs reserve volume, gun line coverage, impeller placement, and the sizing rules that keep weighted mud in suspension.">
+    <meta name="keywords" content="mud tank sizing, mud tank agitation, drilling mud tank design, gun line, mud agitator sizing, solids control tanks, active mud volume, drilling mud system, CHINA KOMAL">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chinakomal.com/blog-mud-tank-sizing-agitation-guide.html">
+    <meta property="og:title" content="Mud Tank Sizing and Agitation: How to Avoid a Stagnant or Overbuilt Mud System">
+    <meta property="og:description" content="How to size drilling mud tanks and select the right agitation setup — active vs reserve volume, gun line coverage, impeller placement, and the sizing rules that keep weighted mud in suspension.">
+    <meta property="og:image" content="https://chinakomal.com/images/blog-default.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chinakomal.com/blog-mud-tank-sizing-agitation-guide.html">
+    <meta property="twitter:title" content="Mud Tank Sizing and Agitation: How to Avoid a Stagnant or Overbuilt Mud System">
+    <meta property="twitter:description" content="How to size drilling mud tanks and select the right agitation setup — active vs reserve volume, gun line coverage, impeller placement, and the sizing rules that keep weighted mud in suspension.">
+    <meta property="twitter:image" content="https://chinakomal.com/images/blog-default.jpg">
+
+    <link rel="canonical" href="https://chinakomal.com/blog-mud-tank-sizing-agitation-guide.html">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: #fbbf24; }
+
+        .article-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .article-header h1 { font-size: 2.5rem; max-width: 800px; margin: 0 auto 1rem; line-height: 1.3; }
+        .article-meta { font-size: 0.95rem; opacity: 0.85; }
+        .article-meta span { margin: 0 0.8rem; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .article-content h2 {
+            color: #1e3c72;
+            margin: 2.5rem 0 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content h3 { color: #2a5298; margin: 2rem 0 1rem; font-size: 1.5rem; }
+
+        .article-content p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 2; }
+
+        .article-content ul, .article-content ol { margin: 1.5rem 0 1.5rem 2rem; }
+        .article-content li { margin-bottom: 0.8rem; font-size: 1.1rem; }
+
+        .article-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .article-content th { background: #1e3c72; color: white; padding: 0.9rem 1rem; text-align: left; font-size: 1rem; }
+        .article-content td { border: 1px solid #ddd; padding: 0.9rem 1rem; font-size: 1rem; }
+        .article-content tr:nth-child(even) td { background: #f8f9fb; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box h4 { color: #1e3c72; margin-bottom: 0.8rem; font-size: 1.3rem; }
+
+        .cta-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .cta-box h3 { color: white; margin-bottom: 1rem; font-size: 1.8rem; }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3c72;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-section h4 { margin-bottom: 1rem; font-size: 1.2rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #ccc; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: white; }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #2a5298;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 2rem; }
+            .article-content { padding: 1.5rem; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index-en.html" class="logo">CHINA KOMAL</a>
+            <ul class="nav-links">
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="index-en.html#products">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index-en.html#about">About</a></li>
+                <li><a href="index-en.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <h1>Mud Tank Sizing and Agitation: How to Avoid a Stagnant or Overbuilt Mud System</h1>
+        <div class="article-meta">
+            <span>📅 November 2, 2026</span>
+            <span>✍️ By CHINA KOMAL Team</span>
+            <span>⏱️ 11 min read</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="article-content">
+
+<p>Ask three drilling engineers how big a mud tank system should be and you will get three different answers — and most of them will be based on habit rather than calculation. The result is one of two expensive mistakes: a system so small that every trip needs dilution and every kick needs patience, or a system so large that weighted mud sits stagnant in tanks nobody circulates, and the barite settles to the bottom where it becomes a workover job in itself.</p>
+
+<p>Tank volume and agitation are not two separate decisions. They are one capacity question seen from two angles: how much mud must you hold, and how do you keep that mud in the condition you paid for. This guide covers both — the sizing logic that B2B buyers should apply before signing a specification, and the agitation details that determine whether a correctly sized system ever performs as designed.</p>
+
+<h2>Why Mud Tank Volume Matters More Than Most Specifications Suggest</h2>
+
+<p>Mud tank capacity shows up on the specification sheet as a single number, usually "total volume" in barrels or cubic meters. That number is almost never the number that governs well economics. What governs economics is <strong>active volume</strong> — the circulating volume actually in service between the trip tank, the active system, and the suction pit. Reserve volume sitting in storage tanks is insurance, not capacity.</p>
+
+<p>A general industry trading rule of thumb is that the active surface system should provide enough volume that a trip does not force the rig to dilute the system, and enough volume to manage an influx without losing control. Many operators plan for an active system sized to the expected well depth and hole section rather than a fixed number. Rather than repeating a specific multiplier here — practice varies widely by region, mud type, and operator program — the safer procurement approach is to have your drilling engineer define the required active volume for the deepest section on the program, then have the tank manufacturer confirm the system can deliver that volume <em>with the correct tanks in service</em>, not only at total capacity.</p>
+
+<div class="highlight-box"><h4>Practical Note</h4><p>Always ask for tank volume broken down by compartment, and for the active / reserve split. A package quoted as "800 m³ total" may contain 500 m³ of active volume and 300 m³ that is only usable if you manifold extra tanks in — which changes pump layout, gun line routing, and crew workload. Compare packages on active volume, not headline figures.</p></div>
+
+<h2>The Five Volumes You Should Be Able to Name</h2>
+
+<p>Before you compare quotes, make sure the supplier can give you all five of these for each proposed system. A supplier who can only quote total volume is not ready to spec your package.</p>
+
+<table>
+    <tr><th>Volume</th><th>What it is</th><th>Why it matters</th></tr>
+    <tr><td>Total geometric volume</td><td>Full tank capacity to overflow</td><td>Logistics, transport, rig floor footprint</td></tr>
+    <tr><td>Usable working volume</td><td>Volume below the overflow / above minimum suction level</td><td>The volume you can actually circulate and measure</td></tr>
+    <tr><td>Active volume</td><td>Working volume of the tanks in the circulating path</td><td>Dilution rate, gas-cut mud handling, trip margin</td></tr>
+    <tr><td>Reserve volume</td><td>Working volume of storage / reserve tanks not normally circulating</td><td>Kill mud, loss contingency, emergency response</td></tr>
+    <tr><td>Mix / treatment volume</td><td>Volume of tanks designated for mixing and chemical treatment</td><td>Whether you can condition mud without disturbing the active system</td></tr>
+</table>
+
+<p>On well-service and workover programs where the rig moves frequently, total volume and footprint often dominate the decision and active volume requirements are modest. On deep vertical or horizontal development wells, active volume requirements dominate — and a package that looks generous in total terms can be thin where it counts. Our <a href="blog-decanter-centrifuge-solids-control-guide.html">centrifuge selection guide</a> makes the same point from a different angle: the machine's rated capacity means little unless it is matched to the volume and solids loading of the actual circulating system.</p>
+
+<h2>Sizing Rules for the Agitation Package</h2>
+
+<p>Once the volume is right, agitation decides whether the mud stays in specification. Weighted mud, in particular, is a suspension that nature wants to settle. Barite at typical grind sizes will sink in an unagitated tank within hours; fine drilled solids settle more slowly but compact into a hard, difficult-to-remove layer that eventually reduces usable tank volume and contaminates every subsequent fluid in that compartment.</p>
+
+<p>Four rules cover most of the engineering decisions:</p>
+
+<ul>
+<li><strong>Size agitators to the compartment, not the tank.</strong> Each compartment needs enough impeller power to turn the fluid over in that compartment. A large tank divided into three compartments needs three correctly sized agitators, not one large one.</li>
+<li><strong>Place impellers to avoid dead zones.</strong> Agitators mounted off-centre — typically offset and angled so the discharge sweeps the compartment corners — keep solids mobile far better than a centrally mounted unit that simply creates a rotating column of fluid around itself. Specify the mounting position and confirm it in the layout drawing.</li>
+<li><strong>Use gun lines for what agitators cannot reach.</strong> Corner sloped bottoms, suction bays, and manifold points all collect settled material. A properly designed gun line, fed from the mixing or transfer pump at a pressure the system can sustain, breaks up these deposits before they compact — provided the guns are actually run on a schedule rather than only when someone notices a problem.</li>
+<li><strong>Keep suction and discharge in the right compartments.</strong> Agitating a compartment does nothing to keep the suction bay clear unless the hydraulic connection exists. Review the flow path through the package, not just the equipment list.</li>
+</ul>
+
+<p>Agitator gearboxes are among the most neglected components on a solids control package because they fail slowly and silently. Check oil levels, oil condition, and seal integrity on a defined schedule; a gearbox that leaks oil into the mud is often discovered only when it fails.</p>
+
+<h2>Stagnant Volume Is the Most Common Hidden Cost</h2>
+
+<p>Most overbuilt systems are not overbuilt in total — they are overbuilt in <em>stagnant</em> volume. Tanks that are manifolded but rarely circulated collect a different fluid than the active system: heavier, thicker, and carrying settled solids. When a crew finally brings that volume online during a loss event or a trip, they introduce contamination at exactly the wrong moment.</p>
+
+<p>There are three practical defenses:</p>
+<ol>
+<li><strong>Rotate tanks deliberately.</strong> Put tank rotation on the daily plan, with a defined interval suited to the mud weight and solids level — not left to whoever is on tour.</li>
+<li><strong>Specify real circulation capability into reserve tanks.</strong> If reserve tanks cannot be circulated and agitated, they are storage, not reserve. Price them accordingly and treat them as such in the drilling program.</li>
+<li><strong>Track settled solids.</strong> A rising mud weight with unchanged additions, or falling usable volume with unchanged geometry, usually points to accumulated settled material. Treat it as a maintenance finding, not an operational mystery.</li>
+</ol>
+
+<h2>Procurement Checklist: Questions to Ask Before You Commit</h2>
+
+<p>Use these questions in your supplier evaluation. They separate a vendor who sells tanks from a supplier who understands a mud system.</p>
+
+<ul>
+<li>What is the active volume, and which tanks are in the active path as shipped?</li>
+<li>What is the agitation arrangement per compartment — impeller type, power, mounting position, and shaft length?</li>
+<li>What gun line configuration is standard, what pressure does it require, and what pump feeds it?</li>
+<li>How is the suction bay kept clear? What agitation and gun coverage reach it?</li>
+<li>What is the compartment geometry at the bottom — sloped, dished, or flat? Where do solids collect?</li>
+<li>What is the flow path from the shaker discharge to the pump suction, and how many tanks must that fluid cross?</li>
+<li>Can additional reserve tanks be manifolded in later without modifying the pump arrangement?</li>
+<li>What remains in the package when transported — and what is the actual transport footprint per tank? On pad-drilling programs, this can be a project cost by itself.</li>
+</ul>
+
+<div class="highlight-box"><h4>Practical Note</h4><p>Ask for a layout drawing with compartments labelled and the flow path marked before you approve a package. Two suppliers quoting the same total volume can have completely different circulation paths — and the flow path, not the volume, is what determines how much dilution your crew will do over the life of the well.</p></div>
+
+<h2>Integration With the Rest of the Solids Control Package</h2>
+
+<p>Mud tanks do not exist in isolation. Shaker placement determines where coarse solids are removed and where the return fluid enters the system. Desander and desilter placement determines where the fine cut happens. The centrifuge placement determines where the final fine removal occurs — and all of these depend on having enough tanks in the right configuration that each stage is fed with mud it can actually treat.</p>
+
+<p>If the tank layout forces each stage to be fed from the previous stage's discharge without a settling or retention tank in between, the package underperforms no matter how good the individual machines are. This is why the strongest packages are specified as systems, with the tank layout flowing from the treatment sequence rather than being fixed first and equipment fit into it later.</p>
+
+<p>For operators running campaigns across several regions, the standardizing question matters too. A package that is correctly sized for a deep development well and a package sized for a remote exploration program are not the same system. It is often more economic to standardize on a modular tank set that can be deployed partially, than to buy one large system and run it underloaded, or two different systems and stock parts for both.</p>
+
+<h2>Summary</h2>
+
+<p>Mud tank capacity is a system decision, not a number on a datasheet. Get the active volume right for your deepest section, confirm that the usable working volume survives the tanks being in (and out of) service, and specify agitation and gun lines that reach the compartments where solids actually settle. Then keep that volume mobile: no stagnant tanks, no silent gearboxes, no flat-bottom compartments that fill in over months of use.</p>
+
+<p>If you are specifying a new package or replacing a system that has been fighting stagnation for years, bring the discussion to the tank layout early. It is far cheaper to fix in the drawing than in the field.</p>
+
+<div class="cta-box"><h3>Need Help Sizing a Mud Tank System?</h3><p>CHINA KOMAL INTERNATIONAL CO., LTD supplies mud tank systems, agitators, gun line assemblies, shale shakers, mud cleaners, decanter centrifuges and complete solids control packages for onshore and offshore drilling — including modular configurations for pad drilling and remote campaigns. Our technical team can help you define active volume requirements and specify the right package for your drilling program. Contact us today for a quotation.</p><a href="index-en.html#contact" class="cta-button">Contact Us →</a></div>
+            <p><em>Published: November 2, 2026</em></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CHINA KOMAL</h4>
+                <p>Professional oilfield equipment manufacturer — drilling equipment, solids control systems, mud pump parts, shaker screens, and high-pressure pumps.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="index-en.html#products">Products</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="index-en.html#products">Drilling Equipment</a></li>
+                    <li><a href="index-en.html#products">Solids Control</a></li>
+                    <li><a href="index-en.html#products">Mud Pump Parts</a></li>
+                    <li><a href="index-en.html#products">Shaker Screens</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 kenny@chinakomal.com</li>
+                    <li>📞 +86 17777878139</li>
+                    <li>🌐 chinakomal.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CHINA KOMAL INTERNATIONAL CO., LTD. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
