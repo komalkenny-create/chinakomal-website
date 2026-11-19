@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desander and Desilter Sizing in a Drilling Rig Solids Control System | CHINA KOMAL</title>
+    <meta name="description" content="How to size hydrocyclone desanders and desilters on a drilling rig: cut point, cone sizing against volume flow, pressure drop, cone count and spare cone planning.">
+    <meta name="keywords" content="desander desilter sizing, hydrocyclone solids control, mud cleaner, drilling rig solids control system, cone sizing, cut point, drilling fluids, CHINA KOMAL">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chinakomal.com/blog-desander-desilter-sizing-solids-control.html">
+    <meta property="og:title" content="Desander and Desilter Sizing in a Drilling Rig Solids Control System">
+    <meta property="og:description" content="How to size hydrocyclone desanders and desilters on a drilling rig: cut point, cone sizing against volume flow, pressure drop, cone count and spare cone planning.">
+    <meta property="og:image" content="https://chinakomal.com/images/blog-default.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chinakomal.com/blog-desander-desilter-sizing-solids-control.html">
+    <meta property="twitter:title" content="Desander and Desilter Sizing in a Drilling Rig Solids Control System">
+    <meta property="twitter:description" content="How to size hydrocyclone desanders and desilters on a drilling rig: cut point, cone sizing against volume flow, pressure drop, cone count and spare cone planning.">
+    <meta property="twitter:image" content="https://chinakomal.com/images/blog-default.jpg">
+
+    <link rel="canonical" href="https://chinakomal.com/blog-desander-desilter-sizing-solids-control.html">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: #fbbf24; }
+
+        .article-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .article-header h1 { font-size: 2.5rem; max-width: 800px; margin: 0 auto 1rem; line-height: 1.3; }
+        .article-meta { font-size: 0.95rem; opacity: 0.85; }
+        .article-meta span { margin: 0 0.8rem; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .article-content h2 {
+            color: #1e3c72;
+            margin: 2.5rem 0 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content h3 { color: #2a5298; margin: 2rem 0 1rem; font-size: 1.5rem; }
+
+        .article-content p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 2; }
+
+        .article-content ul, .article-content ol { margin: 1.5rem 0 1.5rem 2rem; }
+        .article-content li { margin-bottom: 0.8rem; font-size: 1.1rem; }
+
+        .article-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .article-content th { background: #1e3c72; color: white; padding: 0.9rem 1rem; text-align: left; font-size: 1rem; }
+        .article-content td { border: 1px solid #ddd; padding: 0.9rem 1rem; font-size: 1rem; }
+        .article-content tr:nth-child(even) td { background: #f8f9fb; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box h4 { color: #1e3c72; margin-bottom: 0.8rem; font-size: 1.3rem; }
+
+        .cta-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .cta-box h3 { color: white; margin-bottom: 1rem; font-size: 1.8rem; }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3c72;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-section h4 { margin-bottom: 1rem; font-size: 1.2rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #ccc; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: white; }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #2a5298;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 2rem; }
+            .article-content { padding: 1.5rem; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index-en.html" class="logo">CHINA KOMAL</a>
+            <ul class="nav-links">
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="index-en.html#products">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index-en.html#about">About</a></li>
+                <li><a href="index-en.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <header class="article-header">
+        <h1>Desander and Desilter Sizing in a Drilling Rig Solids Control System</h1>
+        <div class="article-meta">
+            <span>📅 November 19, 2026</span>
+            <span>✍️ By CHINA KOMAL Team</span>
+            <span>⏱️ 10 min read</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="article-content">
+
+<p>Solids control removes drilled cuttings from mud in stages, and the hydrocyclone stages — desander and desilter — sit in the middle of that chain. Shakers take the coarse solids; the centrifuge handles the fine fraction. The cones handle the band in between, and it is the band where a rig's mud properties are usually decided: the weight of the fluid, the viscosity that governs pump efficiency, and the volume of dilution a rig consumes every day.</p>
+
+<p>Desanders and desilters are frequently bought by head count — how many cones, how large — rather than by the flow rate they have to treat and the particle size they are expected to remove. The result is a system that looks complete in the layout drawing and under-performs in the field, and because the under-performance is gradual, it usually gets blamed on the mud, the shakers, or the formation.</p>
+
+<p>This guide covers how the two stages divide the work, how to size each one against volume flow, the operating conditions that determine whether the cones actually cut where they are rated, and how to plan the cones and spare parts that keep them working.</p>
+
+<h2>Where Desanders and Desilters Sit in the System</h2>
+
+<p>The standard rig arrangement runs mud through the shale shakers first, then a sand trap, then the desander, then the desilter, then the decanter centrifuge. Each stage protects the next: the shaker protects the desander cones from large solids that would plug the apex; the desander protects the desilter from the coarse fraction that would overload its smaller cones; the centrifuge takes what the desilter cannot.</p>
+
+<p>The division of labour by particle size is the useful way to think about it:</p>
+
+<ul>
+<li><strong>Shale shakers</strong> — the coarse fraction, broadly the cuttings larger than the finest screen the rig can run, typically down to roughly the 70–200 mesh equivalent depending on screen selection.</li>
+<li><strong>Desander</strong> — the sand fraction. Cones in this stage are sized to remove particles in the coarse-to-medium silt range, commonly quoted around 40–60 microns as a practical cut point.</li>
+<li><strong>Desilter</strong> — the silt fraction, with cones commonly quoted around 12–25 microns as a practical cut point.</li>
+<li><strong>Decanter centrifuge</strong> — the colloidal and fine silt fraction that cyclones cannot separate economically.</li>
+</ul>
+
+<p>Those micron figures are nominal. They come from a given cone design at a given flow and pressure, with a given fluid. The rest of this article is largely about what changes them in service, because that is where sizing decisions are won and lost.</p>
+
+<div class="highlight-box"><h4>Field Note</h4><p>If a rig is diluting mud heavily to hold viscosity, the first question is not the mud programme but whether the desilter cones are working. A desilter that is plugged, worn, or receiving too little pressure leaves the finest fraction in the system permanently, and dilution becomes the only way to keep the fluid pumpable.</p></div>
+
+<h2>Sizing the Desander and Desilter Against Flow Rate</h2>
+
+<p>Cone capacity is a flow figure, not a particle figure. Each cone has a rated throughput at a rated inlet pressure, and the stage's total capacity is the number of cones multiplied by that figure — with a de-rating for the way the cones are manifolded and fed.</p>
+
+<h3>Start from the maximum circulating rate</h3>
+
+<p>The sizing basis is the highest mud flow rate the rig will circulate, not the average. A system sized to average flow will be bypassing or starving at the top of the range, and both conditions produce poor separation.</p>
+
+<p>Two practical constraints follow:</p>
+
+<ol>
+<li><strong>The cones should be able to treat the full circulating volume.</strong> A stage that treats only part of the flow is a partial system, and the untreated fraction carries the solids back into the active system.</li>
+<li><strong>The cones should not be forced to over-treat.</strong> Running a desilter harder than its design flow raises the pressure drop, accelerates wear, and changes the cut so the cone no longer separates where it was rated.</li>
+</ol>
+
+<h3>Count cones for the capacity, then check the arrangement</h3>
+
+<p>Once the required treating flow is known, the cone count follows from the per-cone capacity at the working pressure. The selection question is then which cone size to use:</p>
+
+<table>
+    <tr><th>Cone size (typical)</th><th>Typical per-cone capacity</th><th>Practical role</th><th>Notes</th></tr>
+    <tr><td>10–12 inch</td><td>High, on the order of 100 m³/h per cone at rated pressure</td><td>Desander, sand removal ahead of the mud cleaner</td><td>Fewer cones, larger openings, tolerant of the coarse fraction the shakers pass</td></tr>
+    <tr><td>4–5 inch</td><td>Lower, on the order of 15–25 m³/h per cone at rated pressure</td><td>Desilter stage</td><td>More cones, finer cut, more sensitive to inlet pressure and to plugging</td></tr>
+</table>
+
+<p>Always size from the manufacturer's published capacity curve for the specific cone, at the pressure the rig can actually deliver at the manifold, and confirm the figures in writing with the quotation. Catalogue capacities are quoted at a design pressure that a poorly piped installation will not reach, and the difference between the rated and actual pressure is one of the most common reasons a correctly sized system under-performs.</p>
+
+<h3>Mud cleaner versus separate stages</h3>
+
+<p>A mud cleaner combines a desilter cone bank with a fine shaker underneath, so the cone underflow is screened rather than discharged as wet solids. For rigs with limited deck space or with a strict requirement to keep liquid on board, this arrangement gets the desilter's cut point with much less fluid loss. The sizing logic for the cones is the same; what changes is the screen selection underneath, which becomes the limiting factor on how dry the discharged solids are.</p>
+
+<h2>Pressure: The Variable That Decides Whether the Cones Work</h2>
+
+<p>A hydrocyclone separates by centrifugal force generated from the pressure drop across it. Feed it below its design pressure and the cut becomes coarser — it removes less, and it removes it less completely. Over-pressure it and you gain a finer cut at the cost of accelerated wear and, past a point, turbulence that degrades separation and sends coarse solids to the overflow.</p>
+
+<p>Three practical points matter to buyers and rig crews:</p>
+
+<ul>
+<li><strong>Specify the working pressure at the cone inlet</strong>, and check it is achievable with the feed pump and piping the rig will install. A desilter fed by a pump selected for the shaker feed line will usually not reach the cone's rated pressure.</li>
+<li><strong>Use a pressure gauge at the manifold</strong>, not a guess from the pump's nameplate. The gauge is the single most useful instrument on the solids control package.</li>
+<li><strong>Check the pressure with clean cones</strong>. A plugged cone or a worn apex changes the pressure reading and can mask itself as a pump problem.</li>
+</ul>
+
+<p>Where pressure cannot be met, the answer is a feed pump and header sized for the cone bank, not a larger cone count. Adding cones to a system that cannot pressurise them produces more cones doing the same inadequate job.</p>
+
+<h2>What Degrades Performance in Service</h2>
+
+<p>Cone performance falls away for four reasons, and each has a different remedy.</p>
+
+<h3>Wear at the apex and inlet</h3>
+
+<p>The apex is the highest-wear part of a cone. As the opening erodes, the underflow discharge changes and the cut point moves coarser, so the cone stops removing the fines it was selected for. Polyurethane cones resist abrasion far better than the older metal and rubber constructions, and the practical advantage is not only life but consistency — a cone whose geometry stays stable separates consistently instead of drifting out of specification over months.</p>
+
+<h3>Plugging</h3>
+
+<p>A plugged cone stops separating entirely and shows on the manifold only as a slight pressure change. Coarse solids arriving ahead of the desander, an oversized shaker screen passing oversize material, or an apex that is too small for the solids load will all cause it. The check is simple: look at the underflow spray pattern of every cone. A cone discharging a fan that has become a rope, a dribble or nothing at all is not working.</p>
+
+<h3>Air entrainment and poor feed distribution</h3>
+
+<p>Cyclones need a stable, air-free feed. If the feed line draws air, or if the manifold distributes flow unevenly so some cones are starved and others overloaded, the whole bank performs at the level of its worst-fed cones. Correct manifold design and a flooded feed line are installation details that are rarely inspected and frequently wrong.</p>
+
+<h3>Wrong flow, again</h3>
+
+<p>The most common and least visible cause. Running the desilter at half its rated flow because the rig circulates less than the system was sized for gives a coarser cut and leaves fines in the system while the equipment appears fully operational. If the rig's circulating rate falls after a well programme change, the cone bank should be reconsidered — fewer cones on a properly pressurised manifold will out-perform the full bank at inadequate pressure.</p>
+
+<div class="highlight-box"><h4>Practical Note</h4><p>Walk the cone bank during a tour and check three things per cone: underflow pattern, apex condition, and the spray angle. Ten minutes of observation finds more separation problems than any test on the mud report, and it finds them before they show up as dilution cost.</p></div>
+
+<h2>Cones, Apexes and Spare Parts Planning</h2>
+
+<p>Desanders and desilters are consumable-intensive equipment, and the purchasing decision should be made with the consumable cycle in mind. For a rig running cones continuously, the spares list is short and predictable:</p>
+
+<ul>
+<li><strong>Cone bodies</strong> — one spare cone per bank, of each size in use, so a failed cone can be swapped instead of bypassed.</li>
+<li><strong>Apex inserts or replaceable apexes</strong> — the highest-turnover item. Stock by size, because the correct apex is set by the solids load and discharge pattern, not by convenience.</li>
+<li><strong>Inlet and overflow wear parts</strong> where the design uses replaceable liners.</li>
+<li><strong>Manifold gaskets, valves and gauges</strong> — small parts that decide whether a bank can be isolated and checked cone by cone.</li>
+<li><strong>Feed pump wear parts</strong> — the pump is part of the separation system, and its condition sets the pressure the cones see.</li>
+</ul>
+
+<p>The ordering logic that works is the same one used for the shaker screens: stock by wear rate measured over the last year, not by guesswork at the start of a contract. Our guide to <a href="blog-shale-shaker-screen-selection-guide.html">shaker screen selection</a> covers the upstream stage, and our <a href="blog-shaker-screen-blinding-plugging-troubleshooting.html">screen troubleshooting guide</a> covers the symptoms that most often turn out to originate ahead of the cones. Our article on <a href="blog-decanter-centrifuge-solids-control-guide.html">decanter centrifuges</a> covers the stage downstream, where the fraction the desilter cannot reach is finally removed.</p>
+
+<h2>What to Specify When Buying</h2>
+
+<p>For contractors and rig builders specifying a solids control package, six items should be settled in writing before the equipment order:</p>
+
+<ol>
+<li><strong>Maximum circulating rate</strong> and the mud weight range the system must handle, with the treating flow stated at the top of that range.</li>
+<li><strong>Cone count and size per stage</strong>, with the rated capacity at the stated inlet pressure — using the manufacturer's capacity curve for the specific cone, not a generic table.</li>
+<li><strong>The pressure the feed pump and header will deliver at the manifold</strong>, and confirmation that the two match.</li>
+<li><strong>Cone construction</strong> — material, replaceable wear parts, and the availability of apex sizes as spares.</li>
+<li><strong>Mud cleaner or separate stages</strong>, and the screen specification under the cones if a cleaner is chosen.</li>
+<li><strong>Spare cone and apex quantities</strong> supplied with the initial order, and the lead time for repeat supply.</li>
+</ol>
+
+<p>Solids control also has to be evaluated as a chain rather than as a set of individual machines. A well-sized desilter behind a shaker passing oversize material will plug; a correctly specified desander feeding a desilter with no pressure will not deliver its cut; and neither will help if the centrifuge downstream is not sized to take its fraction. The buying question is not "how many cones" but "what does each stage take, and what does the next stage see as a result".</p>
+
+<h2>Summary</h2>
+
+<p>Desanders and desilters do a specific job in a specific band of particle sizes, and they do it well only when they are sized against the rig's maximum circulating rate, fed at the pressure the cone design assumes, and kept in condition as their wear parts are consumed. Size from capacity curves and achievable pressure, count cones for the real flow rather than the average, watch the underflow every tour, and stock apexes as the routine consumable they are. The return appears as less dilution, steadier mud weight, and a centrifuge that is not overloaded — none of which shows up on the cone invoice.</p>
+
+<div class="cta-box"><h3>Need a Solids Control Package Sized to Your Rig?</h3><p>CHINA KOMAL INTERNATIONAL CO., LTD supplies desanders, desilters, mud cleaners, shale shakers, decanter centrifuges and the cones, apexes and spares that keep them running, for drilling rigs and workover operations. Tell us your maximum circulating rate, mud weight range, rig layout and the screen and centrifuge stages you already have, and our technical team will recommend the cone configuration and spares package to match. Contact us today for a quotation.</p><a href="index-en.html#contact" class="cta-button">Contact Us →</a></div>
+            <p><em>Published: November 19, 2026</em></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CHINA KOMAL</h4>
+                <p>Professional oilfield equipment manufacturer — drilling equipment, solids control systems, mud pump parts, shaker screens, and high-pressure pumps.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="index-en.html#products">Products</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="index-en.html#products">Drilling Equipment</a></li>
+                    <li><a href="index-en.html#products">Solids Control</a></li>
+                    <li><a href="index-en.html#products">Mud Pump Parts</a></li>
+                    <li><a href="index-en.html#products">Shaker Screens</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 kenny@chinakomal.com</li>
+                    <li>📞 +86 17777878139</li>
+                    <li>🌐 chinakomal.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CHINA KOMAL INTERNATIONAL CO., LTD. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
